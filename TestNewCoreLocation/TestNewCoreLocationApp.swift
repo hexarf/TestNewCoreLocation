@@ -11,20 +11,7 @@ import SwiftUI
 struct TestNewCoreLocationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
- //           testFunc()
-            let _ = testFunc()
-
-            let _ = LocationTester()
+            ContentView(position: .userLocation(fallback: .automatic))
         }
-    }
-}
-
-extension TestNewCoreLocationApp {
-    func testFunc() {
-        print("asdc")
-
-//        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
-        print("🍎🍎:\(UIApplication.openSettingsURLString)")
     }
 }
