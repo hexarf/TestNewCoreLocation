@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C0338CD72A82473500AC41A9 /* LocationTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0338CD62A82473500AC41A9 /* LocationTester.swift */; };
-		C0338CD92A82480A00AC41A9 /* NewLocationTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0338CD82A82480A00AC41A9 /* NewLocationTester.swift */; };
 		C0338CDC2A824FE300AC41A9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C0338CDB2A824FE300AC41A9 /* Settings.bundle */; };
 		C0338CDF2A8252E300AC41A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0338CDE2A8252E300AC41A9 /* CoreLocation.framework */; };
 		C0338CE12A8252ED00AC41A9 /* CoreLocationUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0338CE02A8252ED00AC41A9 /* CoreLocationUI.framework */; };
@@ -16,11 +15,11 @@
 		C03BAC932A7F76D100800647 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BAC922A7F76D100800647 /* ContentView.swift */; };
 		C03BAC952A7F76D400800647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03BAC942A7F76D400800647 /* Assets.xcassets */; };
 		C03BAC982A7F76D400800647 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03BAC972A7F76D400800647 /* Preview Assets.xcassets */; };
+		C098E6392A92565B00D098C4 /* LegacyLocationTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098E6382A92565B00D098C4 /* LegacyLocationTester.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C0338CD62A82473500AC41A9 /* LocationTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTester.swift; sourceTree = "<group>"; };
-		C0338CD82A82480A00AC41A9 /* NewLocationTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLocationTester.swift; sourceTree = "<group>"; };
 		C0338CDA2A824C7100AC41A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C0338CDB2A824FE300AC41A9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C0338CDE2A8252E300AC41A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -30,6 +29,7 @@
 		C03BAC922A7F76D100800647 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C03BAC942A7F76D400800647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C03BAC972A7F76D400800647 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C098E6382A92565B00D098C4 /* LegacyLocationTester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegacyLocationTester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +75,9 @@
 		C03BAC8F2A7F76D100800647 /* TestNewCoreLocation */ = {
 			isa = PBXGroup;
 			children = (
+				C098E6382A92565B00D098C4 /* LegacyLocationTester.swift */,
 				C0338CDA2A824C7100AC41A9 /* Info.plist */,
 				C0338CD62A82473500AC41A9 /* LocationTester.swift */,
-				C0338CD82A82480A00AC41A9 /* NewLocationTester.swift */,
 				C03BAC902A7F76D100800647 /* TestNewCoreLocationApp.swift */,
 				C03BAC922A7F76D100800647 /* ContentView.swift */,
 				C03BAC942A7F76D400800647 /* Assets.xcassets */,
@@ -165,9 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0338CD92A82480A00AC41A9 /* NewLocationTester.swift in Sources */,
 				C03BAC932A7F76D100800647 /* ContentView.swift in Sources */,
 				C0338CD72A82473500AC41A9 /* LocationTester.swift in Sources */,
+				C098E6392A92565B00D098C4 /* LegacyLocationTester.swift in Sources */,
 				C03BAC912A7F76D100800647 /* TestNewCoreLocationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

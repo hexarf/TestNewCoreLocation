@@ -45,40 +45,27 @@ import os
                     updateCount += 1
                 }
             } catch {
-                print("🍎🍎error")
+                print("error")
             }
             return
         }
     }
 
     func monitorTest() async {
-        //off
-//        return
-
         let monitor = await CLMonitor("testMonitor2")
         await monitor.remove("ApplePark")
         await monitor.remove("MyHome")
         await monitor.remove("Store")
 
-//        let applePark = CLMonitor.CircularGeographicCondition(center: .init(latitude: 37.33467, longitude: -122.00898), radius: 50.0)
-//        await monitor.add(applePark, identifier: "ApplePark")
-//
-//        let myHome = CLMonitor.CircularGeographicCondition(center: .init(latitude: 35.4690822, longitude: 139.6324153), radius: 50.0)
-//        await monitor.add(myHome, identifier: "MyHome")
-
         let store = CLMonitor.CircularGeographicCondition(center: .init(latitude: 35.470561, longitude: 139.632648), radius: 20)
         await monitor.add(store, identifier: "Store")
 
-//
-//        //35.4690822,139.6324153,18.6z
-//
-//
         let identifiers = await monitor.identifiers
-        print("🍎🍎identifiers:\(identifiers)")
+        print("identifiers:\(identifiers)")
 
         do {
             for try await event in await monitor.events {
-                print("🍎🍎state:\(event.state), id:\(event.identifier), date:\(event.date)")
+                print("state:\(event.state), id:\(event.identifier), date:\(event.date)")
 
                 switch event.state {
                 case .satisfied:
@@ -90,15 +77,9 @@ import os
                 default:
                     self.monitorEvent = .nothing
                 }
-
-                let monitorRecordApple = await monitor.record(for: "ApplePark")
-                let monitorRecord = await monitor.record(for: "MyHome")
-                print("🍎🍎event apple:\(monitorRecordApple?.lastEvent.state.rawValue)")
-                print("🍎🍎event home:\(monitorRecord?.lastEvent.state.rawValue)")
-
             }
         } catch {
-            print("🍎🍎error")
+
         }
     }
 
@@ -117,7 +98,7 @@ import os
         default:
             state = .nothing
         }
-        print("🍎🍎last store: \(monitorRecord?.lastEvent.identifier), \(state), \(monitorRecord?.lastEvent.date)")
+        print("last store: \(monitorRecord?.lastEvent.identifier), \(state), \(monitorRecord?.lastEvent.date)")
     }
 
     func changeBackgroundSession(_ haveBackgroundSession: Bool) {

@@ -31,10 +31,6 @@ class LegacyLocationTester: NSObject, CLLocationManagerDelegate, ObservableObjec
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         lastLocation = locations.last
         updateCount += 1
-        print("🍎🍎delegate:\(updateCount)")
-//        if updateCount > 20 {
-//            locationManager.allowsBackgroundLocationUpdates = false
-//        }
     }
 
     func requestLocation() {
